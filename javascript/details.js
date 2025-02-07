@@ -1,10 +1,7 @@
 function cargarDetalles() {
     const urlParams = new URLSearchParams(window.location.search)
-
     const eventoID = urlParams.get('id')
-
     const eventos = JSON.parse(localStorage.getItem('eventosNASA')) || []
-
     const item = eventos.find(a => a.date === eventoID)
 
     if (!item) {

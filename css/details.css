@@ -1,0 +1,49 @@
+/* Fondo con degradado */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5e);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos para la tarjeta */
+.card {
+    max-width: 500px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    color: white;
+}
+
+.card img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Botón de regreso */
+.btn-back {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    background: #00ff88;
+    color: #222;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #00cc66;
+    color: white;
+}

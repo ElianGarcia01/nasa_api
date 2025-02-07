@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+
+</head>
+
+<body>
+
+    <header class="text-center p-4">
+        <h1>🌌 NASA Explorer</h1>
+        <p>Descubre el universo con imagenes astronomicas de la NASA</p>
+    </header>
+
+    <!-- Trigger/Boton de abrir el modal -->
+    <button class="btn btn-warning mb-5 ms-4 favoritos-flotante" id="myBtn">Favoritos ❤</button>
+
+    <!-- El Modal -->
+    <div id="myModal" class="modal">
+        <!-- Contenido del Modal -->
+        <div class="modal-content" id="modal-content">
+            <span class="close">&times;</span>
+            <h4 class="text-black">Favoritos 💛</h4>
+            <div id="favoritesGallery" class="gallery"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mb-4 justify-content-center">
+            <div class="col-md-3 mb-2">
+                <input type="text" id="buscarTexto" class="form-control" placeholder="Buscar por título">
+            </div>
+            <div class="col-md-3 mb-2">
+                <input type="date" id="filtroFecha" class="form-control">
+            </div>
+            <div class="col-md-3 mb-2">
+                <select id="filtroMedia" class="form-select font-bold">
+                    <option value="">Todos</option>
+                    <option value="image">Imagen</option>
+                    <option value="video">Video</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row" id="contenedorTarjetas"></div>
+    </div>
+
+    <script src="javascript/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

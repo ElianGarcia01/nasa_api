@@ -1,0 +1,167 @@
+body {
+    background-color: #0a0a23;
+    color: white;
+}
+
+.card {
+    background-color: #1c1c3a;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Hace que la tarjeta se levante */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+    /* Agrega sombra */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    margin: 20px;
+}
+
+/* Estilo para los filtros */
+#filtroTitulo,
+#filtroFecha,
+#filtroMedia {
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+    transition: all 0.3s ease;
+    /* Transición suave */
+}
+
+#filtroTitulo:focus,
+#filtroFecha:focus,
+#filtroMedia:focus {
+    border-color: #6c757d;
+    /* Cambia el color del borde cuando está enfocado */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    /* Resaltado sutil */
+}
+
+.form-select,
+.form-control {
+    padding: 10px;
+}
+
+/* ---- Modal ---- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+    text-align: center;
+
+}
+
+/* ---- Botón de cerrar ---- */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: red;
+}
+
+
+/* ---- Animación de entrada ---- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---- Galería de Favoritos ---- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* ---- Botón de favoritos ---- */
+.btn-favoritos {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.btn-favoritos:hover {
+    transform: scale(1.1);
+}
+
+.btn-fav {
+    background-color: #ff9800;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.favoritos-flotante {
+    position: fixed;
+    /* Fija el botón en la pantalla */
+    top: 80px;
+    /* Ajusta la distancia desde el top para que quede justo debajo del navbar */
+    left: 20px;
+    /* Distancia desde la parte izquierda de la pantalla */
+    z-index: 1050;
+    /* Asegura que el botón esté por encima de otros elementos */
+}
